@@ -15,6 +15,23 @@ sudo apt-get install git -y
 git --version
 
 
+git status - статус репозитория
+
+git add -A   - сделать все файлы отслеживаемыми
+
+git commit -a -m "first commit" - создать коммит (коментарий обязателен)
+
+git checkout - Сбросить все изменения, которые вы только что сделали
+
+git log - посмотреть коммиты
+
+git remote add origin https://github.com/Marfall/JSProject.git    - связать локальный репозиторий с удаленным
+
+git push -u origin master - запушить на удаленку  название - ветка 
+
+-u означает, что по умолчанию все будет пушиться именно сюда
+
+
 # Инициализация git-репозитория:
 
 mkdir testProject	
@@ -68,21 +85,11 @@ git add temp  - сделает файл temp - tracked - получит кома
 
     echo information >> temp   -  дописать информацию в файл temp
 
-git status - статус репозитория
 
-git add -A   - сделать все файлы отслеживаемыми
 
-git commit -a -m "first commit" - создать коммит (коментарий обязателен)
 
-git checkout - Сбросить все изменения, которые вы только что сделали
 
-git log - посмотреть коммиты
 
-git remote add origin https://github.com/Marfall/JSProject.git    - связать локальный репозиторий с удаленным
-
-git push -u origin master - запушить на удаленку  название - ветка 
-
--u означает, что по умолчанию все будет пушиться именно сюда
 
 
 
