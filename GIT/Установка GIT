@@ -1,0 +1,19 @@
+#Установка с терминала
+
+sudo apt install git-all
+
+#проверка версии GIT
+
+git --version
+
+#Добавить последнию версию с репозитория
+
+sudo add-apt-repository ppa:git-core/ppa -y
+
+sudo apt-get install git -y
+
+git --version
+
+
+
+

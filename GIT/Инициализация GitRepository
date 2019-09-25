@@ -1,0 +1,11 @@
+# Инициализация git-репозитория:
+
+mkdir testProject	
+cd testProject
+git init
+
+# Клонирование git-репозитория в папку на локальной машине:
+
+Находясь в целевой папке:
+
+git clone URL

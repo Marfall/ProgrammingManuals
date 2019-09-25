@@ -1,0 +1,104 @@
+whitenoise@AbstractUniverse ~/Документы/CRMBootCamp/EcoCRM $ git init
+Инициализирован пустой репозиторий Git в /home/whitenoise/Документы/CRMBootCamp/EcoCRM/.git/
+whitenoise@AbstractUniverse ~/Документы/CRMBootCamp/EcoCRM $ git remote add EcoCRM https://github.com/StalnoyKapibar/EcoCRM
+whitenoise@AbstractUniverse ~/Документы/CRMBootCamp/EcoCRM $ git add .
+whitenoise@AbstractUniverse ~/Документы/CRMBootCamp/EcoCRM $ git status
+На ветке master
+
+Еще нет коммитов
+
+Изменения, которые будут включены в коммит:
+  (используйте «git rm --cached <файл>…», чтобы убрать из индекса)
+	новый файл:    .gitignore
+	новый файл:    .mvn/wrapper/MavenWrapperDownloader.java
+	новый файл:    .mvn/wrapper/maven-wrapper.jar
+	новый файл:    .mvn/wrapper/maven-wrapper.properties
+	новый файл:    mvnw
+	новый файл:    mvnw.cmd
+	новый файл:    pom.xml
+	новый файл:    src/main/java/ru/javamentor/EcoCRM/EcoCrmApplication.java
+	новый файл:    src/main/resources/application.properties
+	новый файл:    src/test/java/ru/javamentor/EcoCRM/EcoCrmApplicationTests.java
+
+whitenoise@AbstractUniverse ~/Документы/CRMBootCamp/EcoCRM $ git commit -m "initial boot project"
+[master (корневой коммит) 4e9f3df] initial boot project
+ 10 files changed, 698 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 .mvn/wrapper/MavenWrapperDownloader.java
+ create mode 100644 .mvn/wrapper/maven-wrapper.jar
+ create mode 100644 .mvn/wrapper/maven-wrapper.properties
+ create mode 100755 mvnw
+ create mode 100644 mvnw.cmd
+ create mode 100644 pom.xml
+ create mode 100644 src/main/java/ru/javamentor/EcoCRM/EcoCrmApplication.java
+ create mode 100644 src/main/resources/application.properties
+ create mode 100644 src/test/java/ru/javamentor/EcoCRM/EcoCrmApplicationTests.java
+whitenoise@AbstractUniverse ~/Документы/CRMBootCamp/EcoCRM $ git status
+На ветке master
+нечего коммитить, нет изменений в рабочем каталоге
+whitenoise@AbstractUniverse ~/Документы/CRMBootCamp/EcoCRM $ git status
+На ветке master
+Изменения, которые не в индексе для коммита:
+  (используйте «git add <файл>…», чтобы добавить файл в индекс)
+  (use "git restore <file>..." to discard changes in working directory)
+	изменено:      src/main/java/ru/javamentor/EcoCRM/EcoCrmApplication.java
+
+нет изменений добавленных для коммита
+(используйте «git add» и/или «git commit -a»)
+whitenoise@AbstractUniverse ~/Документы/CRMBootCamp/EcoCRM $ git add .
+whitenoise@AbstractUniverse ~/Документы/CRMBootCamp/EcoCRM $ git status
+На ветке master
+Изменения, которые будут включены в коммит:
+  (use "git restore --staged <file>..." to unstage)
+	изменено:      src/main/java/ru/javamentor/EcoCRM/EcoCrmApplication.java
+
+whitenoise@AbstractUniverse ~/Документы/CRMBootCamp/EcoCRM $ git commit -m "little change"
+[master dc5cf9d] little change
+ 1 file changed, 1 insertion(+)
+whitenoise@AbstractUniverse ~/Документы/CRMBootCamp/EcoCRM $ git log
+commit dc5cf9db32828413636c8320dd48eca32e57aaf5 (HEAD -> master)
+Author: Marfall <marinefalling@gmail.com>
+Date:   Sun Aug 18 12:45:33 2019 +0300
+
+    little change
+
+commit 4e9f3df7af2bd627da48ec100f065c50b38a4dce
+Author: Marfall <marinefalling@gmail.com>
+Date:   Sun Aug 18 12:43:49 2019 +0300
+
+    initial boot project
+whitenoise@AbstractUniverse ~/Документы/CRMBootCamp/EcoCRM $ git push EcoCRM
+fatal: Текущая ветка master не имеет вышестоящей ветки.
+Чтобы отправить текущую ветку и установить внешнюю ветку как вышестоящую для этой ветки, используйте
+
+    git push --set-upstream EcoCRM master
+
+whitenoise@AbstractUniverse ~/Документы/CRMBootCamp/EcoCRM $ git push EcoCRM master
+Username for 'https://github.com': Marfall
+Password for 'https://Marfall@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/StalnoyKapibar/EcoCRM/'
+whitenoise@AbstractUniverse ~/Документы/CRMBootCamp/EcoCRM $ git push EcoCRM master
+Username for 'https://github.com': Marfall
+Password for 'https://Marfall@github.com': 
+remote: Permission to StalnoyKapibar/EcoCRM.git denied to Marfall.
+fatal: «https://github.com/StalnoyKapibar/EcoCRM/» недоступно: The requested URL returned error: 403
+whitenoise@AbstractUniverse ~/Документы/CRMBootCamp/EcoCRM $ git push EcoCRM master
+Username for 'https://github.com': Marfall
+Password for 'https://Marfall@github.com': 
+remote: Permission to StalnoyKapibar/EcoCRM.git denied to Marfall.
+fatal: «https://github.com/StalnoyKapibar/EcoCRM/» недоступно: The requested URL returned error: 403
+whitenoise@AbstractUniverse ~/Документы/CRMBootCamp/EcoCRM $ git push EcoCRM master
+Username for 'https://github.com': Marfall
+Password for 'https://Marfall@github.com': 
+Перечисление объектов: 35, готово.
+Подсчет объектов: 100% (35/35), готово.
+При сжатии изменений используется до 4 потоков
+Сжатие объектов: 100% (23/23), готово.
+Запись объектов: 100% (35/35), 50.24 KiB | 6.28 MiB/s, готово.
+Всего 35 (изменения 2), повторно использовано 0 (изменения 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/StalnoyKapibar/EcoCRM
+ * [new branch]      master -> master
+whitenoise@AbstractUniverse ~/Документы/CRMBootCamp/EcoCRM $ 
+

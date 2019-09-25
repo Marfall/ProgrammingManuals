@@ -1,0 +1,89 @@
+#Установка с терминала
+
+sudo apt install git-all
+
+#проверка версии GIT
+
+git --version
+
+#Добавить последнию версию с репозитория
+
+sudo add-apt-repository ppa:git-core/ppa -y
+
+sudo apt-get install git -y
+
+git --version
+
+
+# Инициализация git-репозитория:
+
+mkdir testProject	
+cd testProject
+git init
+
+# Клонирование git-репозитория в папку на локальной машине:
+
+Находясь в целевой папке:
+
+git clone URL
+
+git config --global user.name "user"
+git config --global user.email "user@mail.ru"
+git init
+git status
+git add .
+git commit -m "commitname"
+git log
+git remote add nazvanie name`.git
+git push navanie master
+git pull nazvanie master
+
+
+# GIT config
+
+git config --list   - список парметров 
+
+    - именно здесь прописывается имя и email, для того чтобы коммиты изменений 
+      прописывались под вашим пользователем
+
+git config --global user.name "Mafall"
+git config --global user.email "marinefalling@gmail.com"
+
+
+#GIT STATUS:
+
+git status -  статус файлов
+
+Файлы в GIT моут находиться в двух состояниях:
+
+1) Tracked (отслеживаемые)
+
+2) Untracked (неотслеживаемые)
+
+    echo "information" > filename   -  создать файл filename с тектом information внутри  в текущей директории
+
+git status -s  - более короткая по информативости  версия команды
+
+git add temp  - сделает файл temp - tracked - получит команду на отслеживание
+
+    echo information >> temp   -  дописать информацию в файл temp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

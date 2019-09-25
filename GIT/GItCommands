@@ -1,0 +1,10 @@
+git config --global user.name "Àíàòîëèé Ìàðàíäþê"
+git config --global user.email "shamaneeel@mail.ru"
+git init
+git status
+git add .
+git commit -m "Êîììåíòàðèé"
+git log
+git remote add nazvanie ññûëêà.git
+git push navanie master
+git pull nazvanie master
