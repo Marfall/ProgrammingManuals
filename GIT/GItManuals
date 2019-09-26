@@ -250,6 +250,132 @@ MODIFIED - состояние, когда изменен, в коммит зап
 
     GIT SHOW V1.0   - информация о текущем тэге  
 
+    GIT TAG v1.5 d5584 - повесить тэг на другой коммит -первые 5 цифр SHA-суммы
+
+    GIT PUSH origin --TAGS  - запушить все тэги
+
+
+# ALIAS: 
+
+    - Псевдононимы 
+
+    GIT CONFIG --LIST   - список всех конфигов, есть конфига , которые начинаются с alias:
+                          alias.s = status 
+    
+    GIT D = GIT DIFF 
+
+    - ALIAS можно добавлять самостоятельно:
+
+    GIT CONFIG --GLOBAL ALIAS.LIST "CONFIG --LIST"
+    
+    - Теперь вместо GIT CONFIG --LIST  можно писать просто GIT LIST,
+      в конфигурацию добавится:
+
+    ALIAS.LIST=CONFIG --LIST
+
+    GIT CONFIG --GLOBAL --UNSET alias.list   - снять alias - имя команды
+
+
+
+# BRANCH
+
+    - Отдельная ветка, не влияющая на основной BRANCH
+
+    GIT BRANCH  - поазывает список branch-ей, которые у нас есть
+
+        - GIT сохраняет снапшоты и branch - это просто ссылка - работает очень быстро
+
+    GIT BRANCH newName   - создать ветку
+
+    GIT BRANCH -v   - более подробная инфа о бранчах -  куда они указывают
+
+    HEAD - указатель на текущий бранчах
+
+    GIT CHECKOUT branchName - переключение на другую ветку
+
+    GIT CHECKOUT -b someOtherBranch - создает и переходит на новый branch
+
+    - до коммита новый файл не принадлежит ни к какому branch-у! (при чекауте пропадать не будет)
+
+    GIT BRANCH -d someBranch    - удаление бранча ( -D   - force delete)
+
+
+
+# MERGE 
+
+    -  GIT CHECKOUT MASTER   - переключаемся на мастер
+        
+        - И теперь хотим смержить два бранча в один:
+
+    -  GIT MERGE TEST 
+
+        - мы находимся в мастере и получили изменения из TEST.
+
+    
+
+# РЕШЕНИЕ КОНФЛИКТОВ ПРИ MERGE:
+
+    - Если два брэнча меня ли один и тот же файл:
+
+    GIT MERGETOOL - утилита для решения конфликтов 
+
+    GIT BRANCH --MERGE   -  посмотреть брэнчи где конфликтов нет
+
+    GIT BRANCH --NO-MERGE   - посмотреть брэнчи с конфликтами
+
+    - Удалить бранчи с конфликтами нельзя(только с -D )
+
+
+
+# УДАЛЕННЫЕ БРАНЧИ:
+
+    GIT LS-REMOTE origin - просмотреть удаленный репозиторий origin     
+
+    GIT REMOTE SHOW origin  - показать инфомацию об origin
+
+    GIT BRANCH -vv      - покажет какие локальные бранчи связаны с какими удаленными
+
+    GIT CHECKOUT -b branchname     - создаст и перейдет на новый локальный брэнч (не связан с remote)
+
+
+
+    -Можно самому создать удаленный branch:
+
+
+    GIT PUSH origin branchname  - создать удаленный брэнч на основании текущего локального
+
+    GIT PUSH origin branchname:anothername  - создать удаленный брэнч на основании текущего локального 
+                                            с другим именем (ни к чему не привязан)
+
+    - TRACKED BRANCH - локальный брэнч, который соответствует удаленному
+
+    GIT CHECKOUT -b qwe origin/testbr    - qwe указывает на testbtr
+
+    GIT CHECKOUT --TRACK origin/testbr - то же самое с одим именем
+
+    GIT BRANCH -d testbr   - удалить брэнч (из другого брэнча)
+
+    
+    GIT CHECKOUT testbr - создаст локальный брэнч на основе удаленного 
+
+    GIT BRANCH  -u origin/test  - связать текущий брэнч с удаленным
+
+    GIT FETCH --all     - достать из всех удаленных брэнчей
+
+    GIT REMOTE UPDATE   - то же самое
+
+    GIT PUSH origin --delete branchname     - удалить remote брэнч
+
+
+
+
+
+
+    
+
+
+
+
 
 
 
