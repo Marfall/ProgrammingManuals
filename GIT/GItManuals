@@ -432,11 +432,47 @@ MODIFIED - состояние, когда изменен, в коммит зап
      GIT SHOW MASTER@{yesterday}    - за вчера
 
 
- # ANSESTRY REFERENCES (Ссылки на родственников)
+ # ANCESTRY REFERENCES (Ссылки на родственников)
 
     GIT LOG --ONELINE -- GRAPH    
 
-    GIT SHOW HEAD   - получить инфу по определенным брэнчам
+    GIT SHOW HEAD   - информация о коммите, на который сейчас указывает HEAD
+
+    GIT SHOW HEAD^  - получить инфомацию о parent-е HEAD,
+                      необязательно HEAD - можно любой другой брэнч:
+
+    GIT SHOW bd59341^   - инфа о паренте этого коммита
+
+    GIT SHOW HEAD~4  (HEAD^^^^)   - инфа о 4-м паренте
+
+
+# COMMIT RANGES
+
+    GIT LOG new..master     - Разница между брэнчами в коммитах
+
+    GIT LOG refA refB ^refC     - разница между тремя бранчами
+
+    GIT LOG master...experiment     - троеточие показывает все коммиты, которые являются разницей
+                                      между брэнчами, но при этом только те, которые будут общими.
+
+
+
+# INTERACTIVE STAGING
+
+    - интерактивный режим добавления данных
+
+    GIT ADD -i  - переход в интерактивный режим
+
+
+# STASH & CLEAN
+
+    - GIT  STASH     - 
+
+
+
+
+
+
 
 
 
