@@ -393,6 +393,7 @@ MODIFIED - состояние, когда изменен, в коммит зап
 
     GIT DIFF --CACHED > test.patch 
 
+
     GIT COMMIT -am "add new file"
 
     GIT APPLY test.patch    - применить патч
@@ -416,6 +417,34 @@ MODIFIED - состояние, когда изменен, в коммит зап
     GIT CHERRYPICK new -    добавило последний коммит из второго брэнча из new в master
 
     => CHERRYPICK берет последний коммит из брэнча и накатывает его в текущий
+
+
+# REFLOG
+
+    - как просмотривать историю
+
+     GIT REFLOG     - покажет вообще все что происходило, только на локальной машине
+
+     GIT SHOW  adfa     -  первые четыре цифры хэша
+
+     GIT SHOW HEAD@{2}   - на два шага назад в истории - что происходило в коммите
+
+     GIT SHOW MASTER@{yesterday}    - за вчера
+
+
+ # ANSESTRY REFERENCES (Ссылки на родственников)
+
+    GIT LOG --ONELINE -- GRAPH    
+
+    GIT SHOW HEAD   - получить инфу по определенным брэнчам
+
+
+
+
+
+
+
+
  
 
     
